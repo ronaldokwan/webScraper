@@ -3,7 +3,7 @@ import requests
 
 url = "https://myanimelist.net/topanime.php"
 url2 = 'https://myanimelist.net/topanime.php?limit=50'
-newList = [str(i) for i in range(50, 1001, 50)]
+newList = [str(i) for i in range(0, 150, 50)] # can change the second parameter to get more results
 urlList = [url2.replace("50", i) for i in newList]
 
 result = requests.get(url).text
